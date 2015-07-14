@@ -1,0 +1,10 @@
+<% @zoo.animals.each do |animal| %>
+	
+<button><%= link_to "Edit", edit_animal_path(animal)%></button>
+
+<button><%= link_to 'Delete', animal_path(animal), class:'btn btn-sm btn-warning',  method: :delete, data: { confirm: 'Are you sure?' } %></button>
+
+	<%= animal.name %>
+	<%= animal.age %>
+	<%= animal.species %>
+<% end %>

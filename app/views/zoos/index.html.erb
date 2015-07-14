@@ -1,0 +1,21 @@
+<h1>Zoos Index</h1>
+
+<% @zoos.each do |zoo| %>
+		<button><%= link_to "Edit", edit_zoo_path(zoo)%></button>
+<button><%= link_to 'Delete', zoo_path(zoo), class:'btn btn-sm btn-warning',  method: :delete, data: { confirm: 'Are you sure?' } %></button>
+
+<button><%= link_to "Add animal", new_zoo_animal_path(zoo)%></button>
+
+<button><%= link_to "Edit animals", zoo_animals_path(zoo)%></button>
+
+	<br>Name:<%= zoo.name %>
+	<p style="color:red;">Location: <%= zoo.location %></p>
+	<p style="color:green;">Animals:
+
+	<% zoo.animals.each do |animal| %>
+	 <%= animal.name %>,
+	 <% end %>
+	 </p>
+
+	<br>
+	<% end %>

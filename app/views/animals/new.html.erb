@@ -1,0 +1,11 @@
+
+
+<%= form_for [@zoo, @animal], class:'form-group' do |f| %>
+    <%= f.label "Name" %>
+    <%= f.text_field :name, class:'form-control', autofocus:true %><br />
+    <%= f.label "Age" %>
+    <%= f.number_field :age, class:'form-control' %><br />
+    <%= f.label "Species" %>
+    <%= f.text_field :species, class:'form-control' %><br />
+    <%= f.submit class:'btn btn-success' %>
+<% end %>

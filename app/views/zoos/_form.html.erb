@@ -1,0 +1,7 @@
+<%= form_for @zoo, class:'form-group' do |f| %>
+    <%= f.label "Name" %>
+    <%= f.text_field :name, class:'form-control', autofocus:true %><br />
+    <%= f.label "Location" %>
+    <%= f.text_field :location, class:'form-control' %><br />
+    <%= f.submit class:'btn btn-success' %>
+<% end %>
